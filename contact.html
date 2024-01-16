@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="images/icons/favicon.ico"/>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="MkOG3xvxvculEQ2ZUNVf_52CdnKHvDZGGKrI6ylI2eY" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/df959595e9.js" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
+    
+    <!-- Hotjar Tracking Code for andrewtumang.com -->
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:2443883,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+  </head>
+<body>
+  <div class="main">
+    <div class="navbar">
+      <div class="overlay" id="overlay"></div>
+      <div class="home-hamburger-container">
+        <a href="index.html">
+          <div class="home-link">AT</div>
+        </a>
+        <div class="hamburger-icon" id="hamburger">
+          <svg class="hamburger-svg" width="28" height="22">
+            <rect class="bar" id="bar1" x="0" y="0" width="28" height="4" rx="2" style="fill:white"/>
+            <rect class="bar" id="bar2" x="0" y="9" width="28" height="4" rx="2" style="fill:white"/>
+            <rect class="bar" id="bar3" x="0" y="18" width="28" height="4" rx="2" style="fill:white"/>
+          </svg>
+        </div>
+      </div>
+      <div class="links" id="links">
+        <!--
+        <a href="index.html#Work" class="link closed" id="work-link">Work<div class="link-line" id="work-line"></div></a>
+        <a href="about.html" class="link closed" id="about-link">About<div class="link-line" id="about-line"></div></a>
+        -->
+        <a href="#" class="link closed" id="contact-link">Contact<div class="link-line" id="contact-line"></div></a>
+      </div>  
+    </div>
+    
+    <div class="contact-container">
+      <h class="title resize" id="title">Let's get in touch!</h>
+      <div class="contact-window resize" id="window">
+        <div class="contact-form">
+          <h1>Send me a message</h1>
+          <form action="https://getform.io/f/c4b5ddc3-838d-4b3f-bcd8-e921fcc7ed45" method="POST">
+              <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
+              <label for="full-name">Name</label>
+              <input type="text" name="name" id="full-name" required="">
+              <label for="email-address">Email</label>
+              <input type="email" name="email" id="email-address" required="">
+              <label for="message=">Message</label>
+              <textarea rows="7" type="message" name="message" id="message" required=""></textarea>
+              <button type="submit">
+                Send&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i>
+                <div class="view-btn-line"></div>
+              </button>
+          </form>
+        </div>
+        <div class="divider">
+          <div class="line" id="line1"></div>
+          <p class="divider-text">or</p>
+          <div class="line" id="line2"></div>
+        </div>
+        <div class="find-me">
+          <h1>Find me here</h1>
+          <div class="contact-info-container">
+            <a href="mailto:hello@andrewtumang.com" class="contact-info" id="email-link">
+              <img class="contact-icon" src="images/icons/email2.svg">
+              <p class="contact-text">hello@andrewtumang.com</p>
+            </a>
+            <a href="https://www.linkedin.com/in/andrewtumang/" class="contact-info" id="linkedin-link">
+              <img class="contact-icon" src="images/icons/linkedin2.svg">
+              <p class="contact-text">linkedin.com/in/andrewtumang</p>
+            </a>
+            <!--<a href="https://github.com/andrewtumang" class="contact-info" id="github-link">
+              <img class="contact-icon" src="images/icons/github2.svg">
+              <p class="contact-text">github.com/atumang</p>
+            </a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!--<footer>
+      <div class="footer-container">
+        <a class="footer-logo" href="index.html"><h>AndrewTumang</h></a>
+        <div class="footer-icons">
+          <a href="https://github.com/andrewtumang"><img class="footer-icon" src="images/icons/github.svg"></a>
+          <a href="https://www.linkedin.com/in/andrewtumang/"><img class="footer-icon" src="images/icons/linkedin.svg"></a>
+          <a href="mailto:hello@andrewtumang.com"><img class="footer-icon" src="images/icons/email.svg"></a>
+        </div>
+        <p class="footer-comment">
+          Designed and coded from scratch by Andrew Tumang
+        </p>
+      </div>
+    </footer>-->
+  </div>
+  
+  <script src="./js/contact.js"></script>
+  <script src="./js/navbar.js"></script>
+  <script>
+   grecaptcha.ready(function() {
+       grecaptcha.execute('6Lecg54gAAAAABH5NyQisD3pCZZp8Jkf-M2AAdMM', {action: 'homepage'})
+       .then(function(token) {
+         document.getElementById('captchaResponse').value = token;
+       });
+     });
+  </script>
+  
+  <!-- Default Statcounter code for Portfolio https://andrewtumang.com/ -->
+  <script type="text/javascript">
+  var sc_project=12796651; 
+  var sc_invisible=1; 
+  var sc_security="21dfa385"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript><div class="statcounter"><a title="Web Analytics"
+  href="https://statcounter.com/" target="_blank"><img class="statcounter"
+  src="https://c.statcounter.com/12796651/0/21dfa385/1/" alt="Web Analytics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code -->
+</body>
+</html>
